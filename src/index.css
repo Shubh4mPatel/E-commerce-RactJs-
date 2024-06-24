@@ -19,3 +19,8 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* Additional styles for body if needed */
 }
+.root{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}

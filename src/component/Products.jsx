@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from './Product';
 import { Typography } from '@material-tailwind/react';
+import CustomNavbar from './CustomNavbar';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -33,7 +34,11 @@ const Products = () => {
   }
 
   return (
-    <section className="py-10 px-8 w-screen ">
+    <>
+    <div className='colo'>
+    <CustomNavbar />
+    </div>
+    <section className="py-10   ">
       <div className="mx-auto text-center mb-16 ">
         <Typography className="font-medium text-lg">Tailored Product Search</Typography>
         <Typography variant="h1" className="my-4 text-4xl">Find What You Need</Typography>
@@ -44,7 +49,10 @@ const Products = () => {
       </div>
       <div className="mx-auto container ">
         <div className="grid grid-cols-1 gap-28 lg:grid-cols-3 md:grid-cols-2 mx-24">
-        {products.map(({ _id, productImage, productName, productDescription, productPrice }) => (
+        {products.map(({ _id
+        
+        
+        , productImage, productName, productDescription, productPrice }) => (
             <Product
               key={_id}
               id={_id}
@@ -57,6 +65,7 @@ const Products = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
